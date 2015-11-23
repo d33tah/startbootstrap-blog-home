@@ -1,222 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>	
+	<!-- original source: https://github.com/IronSummitMedia/startbootstrap-blog-home -->
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A Bootstrap Blog Template">
+	
 
-<head>
+	<title><JOG_TITLE/></title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
 
-    <title>Blog Home - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- Custom Bootstrap CSS file -->
+	<link href="/files/bootstrap.min.css" rel="stylesheet" />
+	<link href="/files/blog-home.css" rel="stylesheet" />
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+	<!-- Header -->
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">			
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<form class="navbar-form navbar-right" role="search" method="post" action="/szukaj/">
+			      <div class="form-group">
+			        <input type="text" class="form-control" placeholder="Search">
+			      </div>
+			      <button type="submit" class="btn btn-primary">Submit</button>
+			    </form>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">Home</a></li>
 
-    <!-- Page Content -->
-    <div class="container">
+<ADMIN_BLOCK><li><a href="<LOGGED_USER_LOG_OUT_HREF/>">Log out  (<CURRENT_USER/>)</a></li></ADMIN_BLOCK>
+<JOGGER_USER_BLOCK><li><a href="<LOGGED_USER_LOG_OUT_HREF/>">Log out  (<CURRENT_USER/>)</a></li></JOGGER_USER_BLOCK>
+<NOUSER_BLOCK><li><a href="http://jogger.pl/#signIn">Log in</a></li></NOUSER_BLOCK>
 
-        <div class="row">
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
+	<!-- Body -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
 
-                <h1 class="page-header">
-                    Page Heading
-                    <small>Secondary Text</small>
-                </h1>
+				<h1>Latest Posts</h1>
 
-                <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<ENTRY_BLOCK>
+				<article>
+					<h2><a href="singlepost.html">Aries Sun Sign March 21 - April 19</a></h2>
 
-                <hr>
+			        <div class="row">
+			          	<div class="group1 col-sm-6 col-md-6">
+			          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Signs</a>
+			          		&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, <a href="#">Fire</a>, <a href="#">Mars</a>
+			          	</div>
+			          	<div class="group2 col-sm-6 col-md-6">
+			          		<span class="glyphicon glyphicon-pencil"></span> <a href="&ENTRY_COMMENT_HREF;"><ENTRY_COMMENT_HREF_DESCR/></a>			          		
+			          		&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> August 24, 2013 9:00 PM			          		
+			          	</div>
+			          </div>
 
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+			          <hr>
 
-                <hr>
+			          <ENTRY_CONTENT_SHORT/>
 
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+					  <p class="text-right">
+				          <a href="&ENTRY_COMMENT_HREF;">
+				          	continue reading...
+				          </a>
+				      </p>
 
-                <hr>
+			          <hr>
+				</article>
+				</ENTRY_BLOCK>
+					
+				<ul class="pager">
+					<li class="previous"><a href="#">&larr; Previous</a></li>
+					<li class="next"><a href="#">Next &rarr;</a></li>
+				</ul>
 
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
+			</div>
+			<div class="col-md-4">
 
-            </div>
+				<div class="well text-center">
+					<p class="lead">
+						Don't want to miss updates? Please click the below button!
+					</p>
+					<button class="btn btn-primary btn-lg">Subscribe to my feed</button>
+				</div>
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+				<!-- Latest Posts -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4>Latest Posts</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="singlepost.html">1. Aries Sun Sign March 21 - April 19</a></li>
+						<li class="list-group-item"><a href="singlepost.html">2. Taurus Sun Sign April 20 - May 20</a></li>
+						<li class="list-group-item"><a href="singlepost.html">3. Gemini Sun Sign May 21 - June 21</a></li>
+						<li class="list-group-item"><a href="singlepost.html">4. Cancer Sun Sign June 22 - July 22</a></li>
+						<li class="list-group-item"><a href="singlepost.html">5. Leo Sun Sign July 23 - August 22 </a></li>
+					</ul>
+				</div>
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
+				<!-- Categories -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Signs</a></li>
+						<li class="list-group-item"><a href="#">Elements</a></li>
+						<li class="list-group-item"><a href="#">Planets</a></li>
+						<li class="list-group-item"><a href="#">Cusps</a></li>
+						<li class="list-group-item"><a href="#">Compatibility</a></li>
+					</ul>
+				</div>
 
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
-                    </div>
-                    <!-- /.row -->
-                </div>
+				<!-- Tags -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4>Tags</h4>
+					</div>
+					<div class="panel-body">
+						<ul class="list-inline">
+							<li><a href="#">Aries</a></li>
+							<li><a href="#">Fire</a></li>
+							<li><a href="#">Mars</a></li>
+							<li><a href="#">Taurus</a></li>
+							<li><a href="#">Earth</a></li>
+							<li><a href="#">Moon</a></li>
+							<li><a href="#">Gemini</a></li>
+							<li><a href="#">Air</a></li>
+							<li><a href="#">Mercury</a></li>
+							<li><a href="#">Cancer</a></li>
+						</ul>
+					</div>
+				</div>
 
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
+				<!-- Recent Comments -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4>Recent Comments</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+						<li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+						<li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+						<li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+					</ul>
+				</div>
 
-            </div>
+			</div>
+		</div>
+	</div>
 
-        </div>
-        <!-- /.row -->
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<hr />
+			<p class="text-center">Copyright &copy; Astrospace 2014. All rights reserved.</p>
+		</div>
+	</footer>
 
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+	<!-- Jquery and Bootstrap Script files -->
+	<script src="lib/jquery-2.0.3.min.js"></script>
+	<script src="bootstrap-custom/js/bootstrap.min.js"></script>
 </body>
-
 </html>
