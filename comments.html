@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<!-- original source: https://github.com/IronSummitMedia/startbootstrap-blog-home -->
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A Bootstrap Blog Template">
+	
+	<link rel="alternate" type="application/atom+xml" title="Wpisy z <JOG_TITLE/>" href="&RSS;" />
+
+	<title><JOG_TITLE/></title>
+
+	<!-- Google fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>	
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
+
+	<!-- Custom Bootstrap CSS file -->
+	<link href="&HOME;/files/bootstrap.min.css" rel="stylesheet" />
+	<link href="&HOME;/files/blog-home.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">			
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<form class="navbar-form navbar-right" role="search" method="post" action="/szukaj/">
+			      <div class="form-group">
+			        <input type="text" name="search" class="form-control" placeholder="Search">
+			      </div>
+			      <button type="submit" class="btn btn-primary">Submit</button>
+			    </form>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="/">Home</a></li>
+
+<!--<ADMIN_BLOCK>--><li><a href="<LOGGED_USER_LOG_OUT_HREF/>">Log out  (<CURRENT_USER/>)</a></li><!--</ADMIN_BLOCK>-->
+<!--<JOGGER_USER_BLOCK>--><li><a href="<LOGGED_USER_LOG_OUT_HREF/>">Log out  (<CURRENT_USER/>)</a></li><!--</JOGGER_USER_BLOCK>-->
+<!--<NOUSER_BLOCK>--><li><a href="http://jogger.pl/#signIn">Log in</a></li><!--</NOUSER_BLOCK>-->
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Body -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+
+				<h1>Latest Posts</h1>
+
+				<ENTRY_BLOCK>
+				<article>
+					<h2><a href="&ENTRY_COMMENT_HREF;"><ENTRY_SUBJECT/></a></h2>
+
+			        <div class="row">
+			          	<div class="group1 col-sm-6 col-md-6">
+			          		<span class="glyphicon glyphicon-bookmark"></span> <ENTRY_CATEGORY_BLOCK><a href="&ENTRY_CATEGORY_HREF;"><ENTRY_CATEGORY_HREF_DESCR/></a><ENTRY_CATEGORY_NOT_LAST>, </ENTRY_CATEGORY_NOT_LAST></ENTRY_CATEGORY_BLOCK>
+			          	</div>
+			          	<div class="group2 col-sm-6 col-md-6">
+			          		<span class="glyphicon glyphicon-pencil"></span> <a href="&ENTRY_COMMENT_HREF;"><ENTRY_COMMENT_HREF_DESCR/></a>			          		
+			          		&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> &ENTRY_DATE_MONTH; &ENTRY_DATE_DAY;, &ENTRY_DATE_YEAR;
+			          	</div>
+			          </div>
+
+			          <hr>
+
+			          <ENTRY_CONTENT_SHORT/>
+
+					  <p class="text-right">
+				          <a href="&ENTRY_COMMENT_HREF;">
+				          	continue reading...
+				          </a>
+				      </p>
+
+			          <hr>
+			          
+			          
+
+	<h3>Komentarze do wpisu:</h3>
+	<div id="comments">
+	<span class="link"><a href="&ENTRY_COMMENT_HREF;rss/" class="rss"><span>RSS komentarzy</span></a><span>,</span> <a href="#commwrite">Dodaj komentarz</a></span>
+	<ol>
+<COMMENT_BLOCK>		<li class="&COMMENT_NICK_CLASS;" id="comm&COMMENT_ID;">
+			<div class="head">
+				<cite>
+					<span class="favicon"><COMMENT_FAVICON_EXIST><img src="&COMMENT_FAVICON2;" width="16" height="16" alt="" /></COMMENT_FAVICON_EXIST><COMMENT_FAVICON_NOT_EXIST><img src="&HOME;/files/nofav.gif" width="16" height="16" alt="" /></COMMENT_FAVICON_NOT_EXIST></span>
+					<span class="nick">~<COMMENT_NICK/></span>
+				</cite>
+				<span class="info">opublikował(a): <strong><COMMENT_DATE/></strong> o godzinie <strong><COMMENT_HOUR/></strong><LOGGED_USER_BLOCK><COMMENT_EDIT_EXIST> <span class="admin"><a href="&COMMENT_EDIT_HREF;">edytuj</a></span></COMMENT_EDIT_EXIST></LOGGED_USER_BLOCK><ADMIN_BLOCK> <span class="admin"><a href="&ADMIN_COMMENT_EDIT_HREF;">edytuj</a> &bull; <a href="&ADMIN_COMMENT_REMOVE_HREF;">usuń</a> &bull; <a href="&ADMIN_COMMENT_BLOCKIP_HREF;" title="Zablokuj IP">IP</a></span></ADMIN_BLOCK></span>
+				<span class="id"><span>, numer komentarza: </span><a href="#comm&COMMENT_ID;">#<COMMENT_NUMBER/></a></span>
+			</div>
+			<blockquote class="body">
+<!-- start comment #&COMMENT_ID -->
+<COMMENT_CONTENT/>
+<!-- end comment #&COMMENT_ID -->
+			</blockquote>
+		</li>
+</COMMENT_BLOCK><COMMENT_PREVIEW_EXIST>		<li id="commpreview">
+			<div class="head">
+				<cite>
+					<span class="favicon"><img src="/files/nofav.gif" width="16" height="16" alt="" /></span>
+					<span class="nick">podgląd</span>
+				</cite>
+				<span class="info">Twój komentarz nie został jeszcze opublikowany</span>
+				<span class="id"><span>, numer komentarza: </span><a href="#commpreview">#x</a></span>
+			</div>
+			<blockquote class="body">
+<!-- start comment -->
+<COMMENT_PREVIEW_BODY/>
+<!-- end comment -->
+			</blockquote>
+		</li></COMMENT_PREVIEW_EXIST>
+	</ol>
+	</div>
+
+<COMMENT_FORM_BLOCK>
+	<h3>Napisz komentarz do wpisu &quot;<ENTRY_TITLE/>&quot;</h3>
+	<div id="commwrite">
+	<form action="&COMMENT_FORM_ACTION;#commpreview" method="post">
+		<fieldset>
+			<p>
+				<label for="commwrite-nick">Nick:</label>
+				<span><input type="text" size="32" maxlength="30" name="commnickid" id="commwrite-nick" value="&COMMENT_FORM_NICKID;" /></span>
+			</p>
+<COMMENT_FORM_NOUSER_BLOCK>			<p>
+				<label for="commwrite-url">Strona WWW:</label>
+				<span><input type="text" size="32" maxlength="30" name="commnickurl" id="commwrite-url" value="<COMMENT_FORM_NICKURL/>" /></span>
+			</p></COMMENT_FORM_NOUSER_BLOCK>
+			<p>
+				<label for="commwrite-body">Treść:</label>
+				<span><textarea cols="22" rows="6" name="commbody" id="commwrite-body"><COMMENT_FORM_BODY/></textarea></span>
+			</p>
+<COMMENT_FORM_NOTIFY_START_BLOCK>			<p class="fallow">
+			    <label for="commwrite-fallow">Sledź:</label>
+			    <span><input type="checkbox" checked="checked" value="notify" name="notifystart" id="commwrite-fallow"/></span>
+			</p></COMMENT_FORM_NOTIFY_START_BLOCK><COMMENT_FORM_NOUSER_BLOCK>			<p class="captcha">
+				<COMMENT_FORM_RECAPTCHA/>
+			</p></COMMENT_FORM_NOUSER_BLOCK>
+			<p class="submit">
+				<input type="submit" value="Wyślij" name="submit" />
+<COMMENT_FORM_NOTIFY_STOP_BLOCK>				<input type="submit" value="Nie śledź" name="notifystop" />
+</COMMENT_FORM_NOTIFY_STOP_BLOCK>				<input type="submit" value="Podgląd" name="preview" />	
+			</p>
+		</fieldset>
+	</form>
+	</div>
+</COMMENT_FORM_BLOCK>
+<COMMENT_NONE_BLOCK>
+	<div class="freeblock">
+	<p>Komentarze zostały zablokowane.</p>
+	</div>
+</COMMENT_NONE_BLOCK>
+			          
+				</article>
+				</ENTRY_BLOCK>
+					
+			</div>
+			<div class="col-md-4">
+
+				<div class="well text-center">
+					<p class="lead">
+						Don't want to miss updates? Please click the below button!
+					</p>
+					<a href="&RSS;" class="btn btn-primary btn-lg">Subscribe to my feed</a>
+				</div>
+
+				<CATEGORY_GROUP_BLOCK>
+				<!-- Tags -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<!--<CATEGORY_BLOCK>-->
+						<li class="list-group-item"><a href="&CATEGORY_HREF;"><CATEGORY_HREF_DESCR/> (<CATEGORY_ENTRIES/>)</a></li>
+						<!--</CATEGORY_BLOCK>-->
+					</ul>
+				</div>
+				</CATEGORY_GROUP_BLOCK>
+
+				
+				<LINK_GROUP_BLOCK>
+				<!-- Tags -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h4><LINK_GROUP_DESCR/></h4>
+					</div>
+					<ul class="list-group">
+						<!--<LINK_BLOCK>-->
+						<li class="list-group-item"><a href="&LINK_HREF;"><LINK_HREF_DESCR/></a></li>
+						<!--</LINK_BLOCK>-->
+					</ul>
+				</div>
+				</LINK_GROUP_BLOCK>
+
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<hr />
+			<p class="text-center">Copyright &copy; Astrospace 2014. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- Jquery and Bootstrap Script files -->
+	<script src="lib/jquery-2.0.3.min.js"></script>
+	<script src="bootstrap-custom/js/bootstrap.min.js"></script>
+</body>
+</html>
